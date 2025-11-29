@@ -9,7 +9,7 @@ window.addEventListener('load', function(){
   function animate(){
     ctx.clearRect(0,0, canvas.width, canvas.height);
     Snake.draw(ctx);
-    Snake/update();
+    Snake.update();
   }
 
   setInterval(animate, 500);
