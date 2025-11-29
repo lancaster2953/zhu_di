@@ -4,7 +4,7 @@ const Snake = {
   image: document.getElementById('zhu_di'),
   draw(context){
     context.fillRect(this.position.x * CELL_SIZE, this.position.y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
-    context.drawImage(this.image.x * CELL_SIZE, this.image.y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
+    context.drawImage(this.image, CELL_SIZE, CELL_SIZE);
   },
   update(){
     this.position.x += this.velocity.x;
