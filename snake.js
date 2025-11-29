@@ -16,5 +16,9 @@ const Snake = {
       this.position.x = 0;
       this.position.y += 1;
     }
+
+    if (this.position.y > ROWS) {
+      GAME.gameOver = true;
+    }
   }
 }
