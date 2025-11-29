@@ -9,5 +9,11 @@ const Snake = {
   update(){
     this.position.x += this.velocity.x;
     this.position.y += this.velocity.y;
+
+    if (
+      this.position.x > COLUMNS - 1
+    ) {
+      this.position.x = 0
+      this.position.y += 1
   }
 }
