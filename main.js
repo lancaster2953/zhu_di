@@ -3,9 +3,6 @@ window.addEventListener('load', function(){
   const ctx = canvas.getContext('2d');
   canvas.width = GAME.width;
   canvas.height = GAME.height;
-  ctx.textAlign = 'center';
-  ctx.font = '20px Arial';
-  ctx.fillText('happy birthday wenwen here\'s zhu di', GAME.width * 0.5, GAME, height * 0.5);
 
   console.log(Snake);
   
@@ -13,6 +10,13 @@ window.addEventListener('load', function(){
     ctx.clearRect(0,0, canvas.width, canvas.height);
     Snake.draw(ctx);
     Snake.update();
+
+    if (GAME.gameOver){
+      ctx.textAlign = 'center';
+      ctx.fillStyle = 'black';
+      ctx.font = '20px Arial';
+      ctx.fillText('happy birthday wenwen here\'s zhu di', GAME.width * 0.5, GAME, height * 0.5);
+    }
   }
 
   setInterval(animate, 500);
